@@ -1,13 +1,12 @@
 <template>
-  <div> <p>HOME</p> </div>
+  <div>Home</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Home'
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>
