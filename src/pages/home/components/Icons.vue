@@ -1,5 +1,5 @@
 <template>
-    <swiper>
+    <swiper :options="swiperOption">
         <swiper-slide v-for="(pages, index) of pages" :key="index">
             <div class="Icons-menu">
                 <div v-for="item in pages" :key="item.id" class="Icons" >
@@ -8,15 +8,18 @@
                 </div>
             </div>
         </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
 </template>
-
 <script>
 
 export default {
   name: 'Home',
   data () {
       return {
+         swiperOption: {
+          pagination: '.swiper-pagination'
+         },
         list: [
             {
                 id: 1,
@@ -101,6 +104,8 @@ export default {
     @import '~styles/varibles.styl'
     .Icons-menu
         width : 100%
+    .icons-pagination
+        margin-top : 3rem
     .Icons
         width : 25%
         height : 25%
