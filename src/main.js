@@ -1,7 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Home from './pages/home/Home'
+import App from './App'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import router from './router'
 import fastClick from 'fastclick'
@@ -18,6 +18,6 @@ fastClick.attach(document.body)
 new Vue({
   el: '#app',
   router,
-  components: { Home },
-  template: '<Home/>'
+  components: { App },
+  template: '<App/>'
 })
