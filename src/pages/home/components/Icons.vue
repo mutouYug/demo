@@ -15,73 +15,14 @@
 
 export default {
   name: 'Home',
+  props: {
+      list: Array
+  },
   data () {
       return {
          swiperOption: {
           pagination: '.swiper-pagination'
-         },
-        list: [
-            {
-                id: 1,
-                imgUrl: require('@/assets/images/ticket.png'),
-                title: '景点门票',
-                url: ''
-            },
-             {
-                id: 2,
-                imgUrl: require('@/assets/images/visit.png'),
-                title: '深圳必游',
-                url: ''
-            },
-             {
-                id: 3,
-                imgUrl: require('@/assets/images/summerShow.png'),
-                title: '暑期夜场',
-                url: ''
-            },
-             {
-                id: 4,
-                imgUrl: require('@/assets/images/aquarium.png'),
-                title: '海洋馆',
-                url: ''
-            },
-             {
-                id: 5,
-                imgUrl: require('@/assets/images/one-day tour.png'),
-                title: '一日游',
-                url: ''
-            },
-             {
-                id: 6,
-                imgUrl: require('@/assets/images/zoo.png'),
-                title: '深圳动物园',
-                url: ''
-            },
-             {
-                id: 7,
-                imgUrl: require('@/assets/images/window-on -world.png'),
-                title: '世界之窗',
-                url: ''
-            },
-             {
-                id: 8,
-                imgUrl: require('@/assets/images/overseas -chinese -city.png'),
-                title: '东部华侨城',
-                url: ''
-            },
-             {
-                id: 9,
-                imgUrl: require('@/assets/images/playa-maya waterPark.png'),
-                title: '玛雅水公园',
-                url: ''
-            },
-             {
-                id: 10,
-                imgUrl: require('@/assets/images/chimelong.png'),
-                title: '玩转长隆',
-                url: ''
-            }
-        ]
+         }
       }
     },
     computed: {

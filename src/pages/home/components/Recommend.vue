@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src="item.imgUrl" />
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -16,30 +16,8 @@
 <script>
 export default {
     name: 'Recommend',
-    data () {
-        return {
-            recommendList: [
-                {
-                    imgUrl: 'https://imgs.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',
-                    title: '大连圣亚海洋世界',
-                    desc: '浪漫大连首站，浪漫的海洋主题乐园'
-                },
-                {
-                    imgUrl: 'https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_250x250_0fc722c0.jpg',
-                    title: '故宫',
-                    desc: '浪漫大连首站，浪漫的海洋主题乐园'
-                },
-                {
-                    imgUrl: 'https://imgs.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_250x250_50c99cf3.jpg',
-                    title: '八达岭长城',
-                    desc: '浪漫大连首站，浪漫的海洋主题乐园'
-                },
-                {
-                    imgUrl: 'https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_250x250_63e3520a.jpg',
-                    title: '圆明园',
-                    desc: '浪漫大连首站，浪漫的海洋主题乐园'
-                }
-            ]}
+    props: {
+        list: Array
     }
 }
 </script>
