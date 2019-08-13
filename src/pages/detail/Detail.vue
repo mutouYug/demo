@@ -1,18 +1,58 @@
 <template>
     <div>
-        <Banner></Banner>
-        <Header></Header>
-        <div class="content"></div>
+        <detail-banner></detail-banner>
+        <detail-header></detail-header>
+        <div class="content">
+            <detail-list :list="list"></detail-list>
+        </div>
     </div>
 </template>
 <script>
-import Banner from './components/banner'
-import Header from './components/Header'
+import DetailBanner from './components/banner'
+import DetailHeader from './components/Header'
+import DetailList from './components/List'
 export default {
     name: 'Detail',
     components: {
-        Banner,
-        Header
+        DetailBanner,
+        DetailHeader,
+        DetailList
+    },
+    data () {
+        return {
+            list: [{
+                title: '成人票',
+                children: [{
+                    title: '成人馆三联票',
+                    children: [{
+                        title: '成人馆三联票 - 乐华游乐场'
+                    }]
+                }, {
+                    title: '成人馆五人票',
+                    children: [{
+                        title: '成人馆三联票 - 乐华游乐场'
+                    }]
+                }]
+            },
+            {
+                title: '学生票',
+                children: [{
+                    title: '学生馆三联票',
+                    children: [{
+                        title: '学生馆三联票 - 乐华游乐场'
+                    }]
+                }]
+            },
+            {
+                title: '儿童票',
+                children: [{
+                    title: '成人馆三联票',
+                    children: [{
+                        title: '成人馆三联票 - 乐华游乐场'
+                    }]
+                }]
+            }]
+        }
     }
 }
 </script>
