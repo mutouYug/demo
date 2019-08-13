@@ -13,6 +13,7 @@
                     class="search-item border-bottom"
                     v-for="item of list"
                     :key="item.id"
+                    @click="handleCityClick(item.name)"
                 >
                     {{item.name}}
                 </li>
@@ -40,6 +41,12 @@ export default {
     computed: {
         hasNoData () {
             return !this.list.length
+        }
+    },
+    methods: {
+         handleCityClick (city) {
+           this.$store.dispatch('changeCity', city)
+           this.$router.push('/')
         }
     },
     watch: {
