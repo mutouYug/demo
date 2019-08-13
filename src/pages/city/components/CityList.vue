@@ -39,7 +39,7 @@
     </div>
 </template>
 <script>
-import BScroll from 'better-scroll'
+import Bscroll from 'better-scroll'
 import {mapState, mapMutations} from 'vuex'
 export default {
     name: 'CityList',
@@ -58,7 +58,7 @@ export default {
             console.log(msg)
         },
         handleCityClick (city) {
-        //    this.$store.dispatch('changeCity', city)
+        // this.$store.dispatch('changeCity', city)
            this.changeCity(city)
            this.$router.push('/')
         },
@@ -73,7 +73,7 @@ export default {
         }
     },
     mounted () {
-        this.scroll = new BScroll(this.$refs.wrapper)
+        this.scroll = new Bscroll(this.$refs.wrapper)
     }
 }
 </script>

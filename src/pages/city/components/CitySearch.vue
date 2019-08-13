@@ -1,7 +1,12 @@
 <template>
     <div>
         <div class="search">
-            <input v-model="keyword" class="search-input" type="text" placeholder="请输入城市名或者拼音" />
+            <input
+                v-model="keyword"
+                class="search-input"
+                type="text"
+                placeholder="请输入城市名或者拼音"
+            />
         </div>
         <div
             class="search-content"
@@ -73,7 +78,7 @@ export default {
         }
     },
     mounted () {
-        this.scroll = Bscroll(this.$refs.search)
+        this.scroll = new Bscroll(this.$refs.search)
     }
 }
 </script>
