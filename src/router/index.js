@@ -8,7 +8,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/Home',
+      path: '/git push --set-upstream origin ttt',
       name: 'Home',
       component: Home
     },
